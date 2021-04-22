@@ -1,6 +1,8 @@
+// Dependencies import
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Button = ({ text, handleClick }) => {
+const Button = ({ text, id }) => {
   const buttonStyle = {
     textAlign: "center",
     border: "1px solid #485696",
@@ -11,9 +13,9 @@ const Button = ({ text, handleClick }) => {
     backgroundColor: "#485696",
   };
   return (
-    <button onClick={handleClick} style={buttonStyle}>
+    <Link to={`/employees/${id}`} style={buttonStyle}>
       {text}
-    </button>
+    </Link>
   );
 };
 

@@ -1,13 +1,12 @@
+// Dependencies import
 import React from "react";
 
 // Components import
-import Avatar from "./Avatar";
-//import Age from "./Age";
-import Button from "./Button";
-import Name from "./Name";
-//import Salary from "./Salary";
+import Avatar from "../generics/Avatar";
+import Button from "../generics/Button";
+import Name from "../generics/Name";
 
-const Card = ({ name }) => {
+const Card = ({ id, name }) => {
   const cardStyle = {
     border: "1px solid #E7E7E7",
     borderRadius: 2,
@@ -25,7 +24,7 @@ const Card = ({ name }) => {
     <div style={cardStyle}>
       <Avatar initial={name.slice(0, 1)} />
       <Name text={name} />
-      <Button text="More details" handleClick={() => {}} />
+      <Button text="More details" id={id} />
     </div>
   );
 };
